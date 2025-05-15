@@ -78,7 +78,10 @@
         </div>
         <h2 class="font-semibold mb-1">Astra</h2>
         <div class="flex items-center space-x-1 mb-3"></div>
-        <div class="mt-auto flex justify-between items-center">
+        <span class="text-xs font-bold bg-blue-100 text-blue-700 px-2 rounded">4.1</span>
+          <div class="flex text-yellow-400 text-sm">★★★★☆</div>
+       
+          <div class="mt-auto flex justify-between items-center">
           <button class="text-blue-900 border border-blue-900 px-3 py-1 rounded text-xs hover:bg-blue-900 hover:text-white transition">Apply now</button>
           <button class="flex items-center space-x-1 text-gray-600 text-xs border border-gray-300 rounded px-2 py-1 hover:bg-gray-100 transition">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5l14 14M19 5l-14 14" /></svg>
