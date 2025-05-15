@@ -65,10 +65,13 @@
                 <p class="text-2xl font-bold text-blue-600">15</p>
                 <p class="text-sm text-gray-700 mt-1">Lowongan</p>
             </div>
-            <div class="bg-white p-6 rounded-xl text-center shadow">
-                <p class="text-2xl font-bold text-blue-600">10</p>
-                <p class="text-sm text-gray-700 mt-1">Pendaftar</p>
-            </div>
+            <a href="pendaftar.php" class="cursor-pointer block">
+                <div class="bg-white p-6 rounded shadow text-center hover:bg-blue-50 transition">
+                    <p class="text-2xl font-bold text-blue-600">10</p>
+                    <p class="text-gray-600">Pendaftar</p>
+                </div>
+            </a>
+
         </div>
 
         <!-- Recent Absence Table -->
