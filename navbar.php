@@ -35,6 +35,7 @@
           <span class="hidden sm:block font-medium text-gray-700">Admin TI</span>
           <svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
             <polyline points="6 9 12 15 18 9"></polyline>
+              <a class="dropdown-item" href="Profile.php">Profil</a>
           </svg>
         </button>
 
