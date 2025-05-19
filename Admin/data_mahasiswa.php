@@ -76,9 +76,7 @@
     </main>
 
     <!-- Footer -->
-    <?php
-    include('../footer_admin.php')
-    ?>
+    <?php include('../footer.php') ?>
 
     <!-- Dropdown JS -->
     <script>

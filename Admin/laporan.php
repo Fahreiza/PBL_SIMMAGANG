@@ -77,7 +77,6 @@
         </div>
 
         <!-- Chart Section -->
-        <!-- Chart Section -->
         <div class="bg-white p-6 rounded-xl shadow mb-6">
             <h2 class="text-xl font-bold text-blue-800 mb-4">Statistik Mahasiswa</h2>
             <div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
@@ -103,7 +102,7 @@
     </main>
 
     <!-- Footer -->
-    <?php include('../footer_admin.php') ?>
+    <?php include('../footer.php') ?>
 
     <!-- Dropdown JS -->
     <script>
