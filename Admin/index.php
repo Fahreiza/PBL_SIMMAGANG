@@ -18,12 +18,41 @@
     <!-- Main Content -->
     <div class="flex flex-col min-h-screen">
         <main class="p-6 max-w-7xl mx-auto w-full">
-
+          <div class="w-full">
+               <img src="https://www.pixelstalk.net/wp-content/uploads/2016/05/Images-New-York-City-Backgrounds.jpg" 
+           alt="Foto" 
+           class="w-full h-48 object-cover rounded-b-lg shadow" />
+           </div> 
+            
             <!-- Heading Section -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
                 <div class="my-3 col-span-3 text-center">
                     <h1 class="text-3xl font-bold text-blue-900">Selamat Datang di Dashboard SIMMAGANG</h1>
                     <p class="text-sm text-gray-600">Sistem Informasi Manajemen Magang Mahasiswa</p>
+                </div>
+
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+                <!-- Card Magang Pusat -->
+                <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+                    <h2 class="text-xl font-bold text-blue-800 mb-3">Magang Pusat</h2>
+                    <p class="text-gray-700 mb-3">
+                        Magang Pusat adalah proses untuk menerapkan keilmuan atau kompetensi yang didapat selama menjalani masa pendidikan, di dunia kerja secara langsung. Pemagang jadi bisa memahami sistem kerja yang profesional di industri sebenarnya.
+                    </p>
+                    <p class="text-gray-700">
+                        Perusahaan-perusahaan yang akan dijadikan tempat magang sudah terorganisir oleh kampus.
+                    </p>
+                </div>
+
+                <!-- Card Magang Mandiri -->
+                <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+                    <h2 class="text-xl font-bold text-blue-800 mb-3">Magang Mandiri</h2>
+                    <p class="text-gray-700 mb-3">
+                        Magang Mandiri adalah proses untuk menerapkan keilmuan atau kompetensi yang didapat selama menjalani masa pendidikan, di dunia kerja secara langsung. Pemagang jadi bisa memahami sistem kerja yang profesional di industri sebenarnya.
+                    </p>
+                    <p class="text-gray-700">
+                        Mahasiswa mencari sendiri perusahaan-perusahaan yang akan dijadikan untuk penerapan keilmuan atau kompetensi.
+                    </p>
                 </div>
             </div>
 
@@ -49,6 +78,9 @@
                 </a>
 
             </div>
+
+            <?php include('jobcard.php') ?>
+        
 
             <!-- Recent Absence Table -->
             <div class="bg-white p-6 rounded-xl shadow mb-6 hover:bg-blue-50 transition cursor-pointer">

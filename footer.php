@@ -2,18 +2,16 @@
 <footer class="bg-gray-50 text-gray-700 py-12 mt-16">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 text-sm">
     <div>
-      <h5 class="font-semibold mb-4">Pencari kerja</h5>
+      <h5 class="font-semibold mb-4">Pencarian Magang</h5>
       <ul class="space-y-2">
         <li><a href="#" class="hover:text-blue-600">Masuk/daftar</a></li>
-        <li><a href="#" class="hover:text-blue-600">Cari loker magang</a></li>
-        <li><a href="#" class="hover:text-blue-600">Cari loker fresh graduate</a></li>
-        <li><a href="#" class="hover:text-blue-600">Tips karir</a></li>
       </ul>
     </div>
 
     <div>
       <h5 class="font-semibold mb-4">Perusahaan</h5>
       <ul class="space-y-2">
+        <li><a href="job.php"class="hover:text-blue-600">Daftar Perusahaan</a></li>
         <li><a href="#" class="hover:text-blue-600">Masuk perusahaan</a></li>
         <li><a href="#" class="hover:text-blue-600">Pasang loker</a></li>
         <li><a href="#" class="hover:text-blue-600">Kontak sales</a></li>
@@ -21,27 +19,18 @@
     </div>
 
     <div>
-      <h5 class="font-semibold mb-4">Universitas</h5>
+      <h5 class="font-semibold mb-4">Teknologi Informasi</h5>
       <ul class="space-y-2">
-        <li><a href="#" class="hover:text-blue-600">Menjadi partner</a></li>
+        <li><a href="data_pembimbing.php" class="hover:text-blue-600">Daftar Dosen Pembimbing</a></li>
         <li><a href="#" class="hover:text-blue-600">Kontak kami</a></li>
       </ul>
     </div>
 
     <div>
-      <h5 class="font-semibold mb-4">Tentang Internity</h5>
+      <h5 class="font-semibold mb-4">Peraturan</h5>
       <ul class="space-y-2">
-        <li><a href="#" class="hover:text-blue-600">Tentang kami</a></li>
-        <li><a href="#" class="hover:text-blue-600">Karir</a></li>
-        <li><a href="#" class="hover:text-blue-600">Partner</a></li>
-      </ul>
-    </div>
-
-    <div>
-      <h5 class="font-semibold mb-4">Legal</h5>
-      <ul class="space-y-2">
-        <li><a href="#" class="hover:text-blue-600">Kebijakan privasi</a></li>
-        <li><a href="#" class="hover:text-blue-600">Ketentuan layanan</a></li>
+        <li><a href="#" class="hover:text-blue-600">Peraturan Magang</a></li>
+        <li><a href="#" class="hover:text-blue-600">SK Magang</a></li>
       </ul>
     </div>
   </div>
