@@ -8,22 +8,7 @@
 </head>
 <body class="bg-blue-50 text-gray-800">
 
-<?php include '../navbar.php'; ?>
-<!-- User Dropdown -->
-<div class="flex-1 flex justify-end relative">
-    <button id="profileBtn" class="flex items-center space-x-2 focus:outline-none">
-        <img src="https://via.placeholder.com/32" alt="Profile" class="w-8 h-8 rounded-full object-cover" />
-        <span class="text-sm font-medium">Admin TI</span>
-        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" stroke-width="2"
-             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
-        </svg>
-    </button>
-    <div id="profileDropdown" class="hidden absolute right-0 mt-2 w-48 bg-white shadow-md rounded-md py-1 z-50">
-        <a href="pembimbingProfile.php" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Profile</a>
-        <a href="logout.php" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Logout</a>
-    </div>
-</div>
+<?php include '../navbar_pembimbing.php'; ?>
 
 <main class="pt-28 px-6 max-w-6xl mx-auto w-full">
 
@@ -119,25 +104,6 @@
 </main>
 
 <?php include '../footer.php'; ?>
-
-<!-- Dropdown JS -->
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const profileBtn = document.getElementById('profileBtn');
-        const profileDropdown = document.getElementById('profileDropdown');
-
-        profileBtn.addEventListener('click', function (e) {
-            e.stopPropagation();
-            profileDropdown.classList.toggle('hidden');
-        });
-
-        // Hide dropdown when clicking outside
-        document.addEventListener('click', function () {
-            profileDropdown.classList.add('hidden');
-        });
-    });
-</script>
-
 
 </body>
 </html>
