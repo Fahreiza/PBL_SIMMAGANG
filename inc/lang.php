@@ -21,6 +21,9 @@ $lang_id = [
     'pengaturan'     => 'Pengaturan',
     'profil'         => 'Profil',
     'keluar'         => 'Keluar',
+    'magang'         => 'Magang',
+    'perusahaan'     => 'Perusahaan',
+    'absensi'        => 'Absensi'
 ];
 
 $lang_en = [
@@ -30,6 +33,9 @@ $lang_en = [
     'pengaturan'     => 'Settings',
     'profil'         => 'Profile',
     'keluar'         => 'Logout',
+    'magang'         => 'Part-time',
+    'perusahaan'     => 'Company',
+    'absensi'        => 'Roll call'
 ];
 
 $lang = $_SESSION['lang'] === 'en' ? $lang_en : $lang_id;

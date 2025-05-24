@@ -20,9 +20,9 @@
 
             <!-- Center: Navigation Menu -->
             <nav class="hidden md:flex space-x-6 font-medium text-gray-700">
-                <a href="mahasiswa.php" class="hover:text-blue-600 border-b-2 border-transparent hover:border-blue-600 transition"><?= $lang['data_mahasiswa']; ?></a>
-                <a href="pembimbing.php" class="hover:text-blue-600 border-b-2 border-transparent hover:border-blue-600 transition"><?= $lang['pembimbing']; ?></a>
-                <a href="laporan.php" class="hover:text-blue-600 border-b-2 border-transparent hover:border-blue-600 transition"><?= $lang['laporan']; ?></a>
+                <a href="mahasiswa.php" class="hover:text-blue-600 border-b-2 border-transparent hover:border-blue-600 transition"><?= $lang['magang']; ?></a>
+                <a href="perusahaan.php" class="hover:text-blue-600 border-b-2 border-transparent hover:border-blue-600 transition"><?= $lang['perusahaan']; ?></a>
+                <a href="absensi.php" class="hover:text-blue-600 border-b-2 border-transparent hover:border-blue-600 transition"><?= $lang['absensi']; ?></a>
                 <a href="pengaturan.php" class="hover:text-blue-600 border-b-2 border-transparent hover:border-blue-600 transition"><?= $lang['pengaturan']; ?></a>
             </nav>
 
