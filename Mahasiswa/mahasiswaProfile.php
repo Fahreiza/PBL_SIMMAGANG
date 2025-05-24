@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Admin Profile</title>
+    <title>Mahasiswa Profile</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-[#f0f6ff]">
     <?php
-    include('../navbar_admin.php')
+    include('../navbar_mahasiswa.php')
     ?>
 
 <main class="max-w-xl mx-auto px-6 py-10">
     <div class="bg-white p-8 rounded-xl shadow">
         <div class="flex flex-col items-center mb-8">
             <img src="https://i.ibb.co/N1KzB1H/user-icon.png" alt="Profile" class="w-24 h-24 rounded-full mb-4" />
-            <h1 class="text-xl font-bold">Admin TI</h1>
-            <p class="text-sm text-gray-500">Nomor Template 1 Admin</p>
+            <h1 class="text-xl font-bold">Mahasiswa TI</h1>
+            <p class="text-sm text-gray-500">Nomor Template 1 Mahasiswa</p>
         </div>
 
         <form class="space-y-5">

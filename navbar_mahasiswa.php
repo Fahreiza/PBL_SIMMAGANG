@@ -1,4 +1,8 @@
 <?php include 'inc/lang.php'; ?>
+
+<!-- Spacer to prevent navbar overlap when banner appears -->
+<div id="google-translate-banner-spacer"></div>
+
 <header class="bg-white shadow-md fixed top-0 left-0 right-0 z-30">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16 items-center">
@@ -28,16 +32,12 @@
 
             <!-- Right: Google Translate + Profile -->
             <div class="flex items-center space-x-4">
-
                 <!-- Google Translate with Globe Icon -->
                 <div class="flex items-center space-x-2 mr-4">
-                    <!-- Globe Icon -->
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M12 4v1m0 14v1m8-8h1M3 12H2m16.95-4.95l.707.707M5.343 5.343l-.707.707M16.95 16.95l.707-.707M5.343 18.657l-.707-.707M12 6a6 6 0 100 12a6 6 0 000-12z"/>
+                              d="M12 4v1m0 14v1m8-8h1M3 12H2m16.95-4.95l.707.707M5.343 5.343l-.707.707M16.95 16.95l.707-.707M5.343 18.657l-.707-.707M12 6a6 6 0 100 12a6 6 0 000-12z"/>
                     </svg>
-
-                    <!-- Google Translate Widget -->
                     <div id="google_translate_element" class="ml-1"></div>
                 </div>
 
@@ -49,7 +49,7 @@
                     </button>
 
                     <div id="profileDropdown" class="origin-top-right absolute right-0 mt-2 w-44 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 hidden">
-                        <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-t-md"><?= $lang['profil']; ?></a>
+                        <a href="mahasiswaProfile.php" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-t-md"><?= $lang['profil']; ?></a>
                         <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100"><?= $lang['pengaturan']; ?></a>
                         <div class="border-t border-gray-200"></div>
                         <a href="#" class="block px-4 py-2 text-red-600 hover:bg-red-100 rounded-b-md"><?= $lang['keluar']; ?></a>
@@ -62,12 +62,7 @@
 
 <!-- Custom Styles for Google Translate -->
 <style>
-    /* Hilangkan logo G Translate */
-    .goog-logo-link {
-        display: none !important;
-    }
-
-    .goog-te-gadget span {
+    .goog-logo-link, .goog-te-gadget span {
         display: none !important;
     }
 
@@ -76,7 +71,6 @@
         font-size: 0 !important;
     }
 
-    /* Atur select agar tetap tampil rapi */
     #google_translate_element select {
         background-color: white;
         color: #4B5563;
@@ -85,21 +79,33 @@
         font-size: 0.875rem;
         padding: 0.25rem 0.5rem;
     }
+
+    .goog-tooltip,
+    .goog-tooltip:hover,
+    .goog-te-balloon-frame {
+        display: none !important;
+    }
+
+    .goog-text-highlight {
+        background: none !important;
+        box-shadow: none !important;
+    }
+
+    iframe.goog-te-banner-frame {
+        position: absolute !important;
+        top: 0 !important;
+        z-index: 9999 !important;
+        width: 100% !important;
+        height: 40px !important;
+    }
+
+    #google-translate-banner-spacer {
+        height: 0px;
+        transition: height 0.3s ease;
+    }
 </style>
 
-<!-- Script for Google Translate and Dropdowns -->
 <script type="text/javascript">
-    function hideGoogleLogo() {
-        const interval = setInterval(() => {
-            const logo = document.querySelector('.goog-logo-link');
-            if (logo) {
-                logo.style.display = 'none';
-                const spans = document.querySelectorAll('.goog-te-gadget span');
-                spans.forEach(span => span.style.display = 'none');
-                clearInterval(interval);
-            }
-        }, 100);
-    }
     function googleTranslateElementInit() {
         new google.translate.TranslateElement({
             pageLanguage: 'id',
@@ -108,6 +114,7 @@
         }, 'google_translate_element');
     }
 
+    // Handle profile dropdown toggle
     const profileBtn = document.getElementById('profileBtn');
     const profileDropdown = document.getElementById('profileDropdown');
 
@@ -122,7 +129,40 @@
             profileBtn.setAttribute('aria-expanded', false);
         }
     });
+
+    // Observe for Google Translate banner and adjust layout
+    function repositionTranslateBanner() {
+        const iframe = document.querySelector("iframe.goog-te-banner-frame");
+        const spacer = document.getElementById("google-translate-banner-spacer");
+
+        if (iframe && spacer) {
+            spacer.style.height = "40px";
+        }
+    }
+
+    const observer = new MutationObserver(() => {
+        repositionTranslateBanner();
+    });
+
+    observer.observe(document.body, {
+        childList: true,
+        subtree: true
+    });
 </script>
 
 <!-- Google Translate API -->
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+<!-- Google Translate Element Positioned at Bottom -->
+<div id="google_translate_element" style="position: fixed !important; bottom: 0 !important; left: 0 !important; z-index: 9999 !important; background: white; padding: 5px;"></div>
+
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+            {pageLanguage: 'id', layout: google.translate.TranslateElement.InlineLayout.SIMPLE},
+            'google_translate_element'
+        );
+    }
+</script>
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>

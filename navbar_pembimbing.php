@@ -45,11 +45,11 @@
                 <div class="relative">
                     <button id="profileBtn" class="flex items-center space-x-2 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-full" aria-haspopup="true" aria-expanded="false">
                         <img src="https://i.pravatar.cc/40" alt="User avatar" class="w-10 h-10 rounded-full border border-gray-300" />
-                        <span class="hidden sm:block font-medium text-gray-700">Admin TI</span>
+                        <span class="hidden sm:block font-medium text-gray-700">Pembimbing TI</span>
                     </button>
 
                     <div id="profileDropdown" class="origin-top-right absolute right-0 mt-2 w-44 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 hidden">
-                        <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-t-md"><?= $lang['profil']; ?></a>
+                        <a href="pembimbingProfile.php" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-t-md"><?= $lang['profil']; ?></a>
                         <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100"><?= $lang['pengaturan']; ?></a>
                         <div class="border-t border-gray-200"></div>
                         <a href="#" class="block px-4 py-2 text-red-600 hover:bg-red-100 rounded-b-md"><?= $lang['keluar']; ?></a>
