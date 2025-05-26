@@ -1,13 +1,12 @@
 <?php
 session_start();
 
-// Contoh user
+// Data user dummy
 $users = [
     'admin@example.com' => password_hash('admin123', PASSWORD_DEFAULT),
     'dosen@example.com' => password_hash('dosen123', PASSWORD_DEFAULT),
 ];
 
-// Proses login
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = $_POST['email'] ?? '';
     $password = $_POST['password'] ?? '';
@@ -25,22 +24,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Simagang</title>
     <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<style>
+    <style>
         body {
-            background: linear-gradient(to right, #638ECB, #B1C9EF);
+            background: linear-gradient(to right, #667eea, #764ba2);
         }
     </style>
+</head>
 <body class="min-h-screen flex items-center justify-center">
 
     <div class="bg-white p-8 rounded-2xl shadow-lg w-full max-w-md">
         <div class="text-center mb-6">
-            <h1 class="text-3xl font-bold text-gray-800">STRIDEUP</h1>
-            <p class="text-gray-500">SYSTEM MANAGEMENT INTERSHIP</p>
+            <h1 class="text-3xl font-bold text-gray-800">Simagang</h1>
+            <p class="text-gray-500">Sistem Manajemen Magang</p>
         </div>
 
         <?php if (!empty($error)) : ?>
