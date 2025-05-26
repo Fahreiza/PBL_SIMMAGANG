@@ -1,12 +1,13 @@
 
 <?php
-session_start();
+// session_start();
 
-// Cek apakah sudah login
-if (!isset($_SESSION['user'])) {
-    header('Location: /login.php');
-    exit;
-}
+// // Cek apakah sudah login
+// if (!isset($_SESSION['user'])) {
+//     header('Location: /index.php');
+//     exit;
+// }
+
 ?><?php include 'inc/lang.php'; ?>
 <header class="bg-white shadow-md fixed top-0 left-0 right-0 z-30">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -22,17 +23,16 @@ if (!isset($_SESSION['user'])) {
                     </svg>
                 </button>
 
-                <a href="index.php" class="text-blue-700 font-extrabold text-xl tracking-tight hover:text-blue-800">
+                <a href="dashboard.php" class="text-blue-700 font-extrabold text-xl tracking-tight hover:text-blue-800">
                     SIMMAGANG
                 </a>
             </div>
 
             <!-- Center: Navigation Menu -->
            <nav class="hidden md:flex space-x-6 font-medium text-gray-700">
-        <a href="data_mahasiswa.php" class="hover:text-blue-600 border-b-2 border-transparent hover:border-blue-600 transition">Data Mahasiswa</a>
-        <a href="data_pembimbing.php" class="hover:text-blue-600 border-b-2 border-transparent hover:border-blue-600 transition">Pembimbing</a>
-        <a href="laporan.php" class="hover:text-blue-600 border-b-2 border-transparent hover:border-blue-600 transition">Laporan</a>
-        <a href="pengaturan.php" class="hover:text-blue-600 border-b-2 border-transparent hover:border-blue-600 transition">Pengaturan</a>
+        <a href="lowongan.php" class="hover:text-blue-600 border-b-2 border-transparent hover:border-blue-600 transition">Lowongan</a>
+        <a href="pendaftar.php" class="hover:text-blue-600 border-b-2 border-transparent hover:border-blue-600 transition">Pendaftar</a>
+        
       </nav>  
 
             <!-- Right: Google Translate + Profile -->

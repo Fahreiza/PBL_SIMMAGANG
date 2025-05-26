@@ -1,21 +1,39 @@
 <?php
 session_start();
+require 'koneksi.php';
 
-// Contoh user
-$users = [
-    'admin@example.com' => password_hash('admin123', PASSWORD_DEFAULT),
-    'dosen@example.com' => password_hash('dosen123', PASSWORD_DEFAULT),
-];
+$error = '';
 
-// Proses login
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = $_POST['email'] ?? '';
     $password = $_POST['password'] ?? '';
 
-    if (isset($users[$email]) && password_verify($password, $users[$email])) {
-        $_SESSION['user'] = $email;
-        header('Location: dashboard.php');
-        exit;
+    $stmt = $pdo->prepare("SELECT * FROM users WHERE email = ?");
+    $stmt->execute([$email]);
+    $user = $stmt->fetch();
+
+    if ($user && password_verify($password, $user['password'])) {
+        $_SESSION['user'] = [
+            'id'    => $user['id'],
+            'email' => $user['email'],
+            'name'  => $user['name'],
+            'role'  => $user['role'],
+        ];
+
+        // Redirect berdasarkan role
+        switch ($user['role']) {
+            case 'admin':
+                header('Location: dashboard/admin.php');
+                break;
+            case 'dosen':
+                header('Location: dashboard/dosen.php');
+                break;
+            case 'perusahaan':
+                header('Location: dashboard/perusahaan.php');
+                break;
+            default:
+                header('Location: dashboard/mahasiswa.php');
+        }
     } else {
         $error = "Email atau password salah!";
     }
